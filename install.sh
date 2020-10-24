@@ -22,7 +22,12 @@ unzip ms-python.vscode-pylance-$version
 ln -s --relative extension/dist/server.bundle.js pylance.js
 
 cd ..
-echo "#!/usr/bin/env bash" > pylance
-echo "node $(pwd)/pkg/pylance.js --stdio" >> pylance
 
-sudo install pylance /usr/local/bin/
+echo "#!/usr/bin/env bash" > pylance
+echo "node ${PWD/#$HOME/'~'}/pkg/pylance.js --stdio" >> pylance
+
+if [ -d /usr/local/bin/ ]; then
+  sudo install pylance /usr/local/bin/
+else
+  sudo install pylance /usr/bin/
+fi
