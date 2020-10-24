@@ -3,7 +3,7 @@ set -euo pipefail
 
 rm -rf pkg || true
 
-version=$(curl -s 'https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance' | grep '<script class="jiContent" defer="defer" type="application/json">' |  sed 's/<[^>]\+>//g' | jq -r .Resources.Version)
+version=$(curl -s 'https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance' | grep '<script class="jiContent" defer="defer" type="application/json">' |  sed 's/<[^>]*>//g' | jq -r .Resources.Version)
 
 mkdir pkg || true
 cd pkg
