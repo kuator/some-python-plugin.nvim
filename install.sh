@@ -18,5 +18,3 @@ curl -s "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/ms
   -j -b cookie-jar.txt --compressed --output ms-python.vscode-pylance-$version
 
 unzip ms-python.vscode-pylance-$version
-
-ln -s --relative extension/dist/server.bundle.js pylance.js
