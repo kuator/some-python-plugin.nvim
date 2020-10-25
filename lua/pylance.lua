@@ -1,8 +1,9 @@
 local configs = require("nvim_lsp/configs")
+local _, _, plug_path = string.find(debug.getinfo(1, "S").source:sub(2),  "(.*/)lua/pylance.lua")
 
 configs.pylance = {
     default_config = {
-        cmd = {"pylance"},
+        cmd = {"node", plug_path .. "pkg/pylance.js", "--stdio"},
         filetypes = {"python"},
         root_dir = function()
             return vim.loop.cwd()

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -euo pipefail
+set -euox pipefail
 
 rm -rf pkg || true
 
@@ -20,14 +20,3 @@ curl -s "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/ms
 unzip ms-python.vscode-pylance-$version
 
 ln -s --relative extension/dist/server.bundle.js pylance.js
-
-cd ..
-
-echo "#!/usr/bin/env bash" > pylance
-echo "node ${PWD/#$HOME/'~'}/pkg/pylance.js --stdio" >> pylance
-
-if [ -d /usr/local/bin/ ]; then
-  sudo install pylance /usr/local/bin/
-else
-  sudo install pylance /usr/bin/
-fi
