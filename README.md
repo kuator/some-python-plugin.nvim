@@ -8,6 +8,8 @@ Pylance support for nvim-lsp.
 This plugin just contains basic configuation for nvim_lsp and
 [script](./install.sh) to download and install latest vscode pylance server.
 
+Make sure jq, curl, unzip is installed to make script works.
+
 ---
 
 [plug](https://github.com/junegunn/vim-plug)
