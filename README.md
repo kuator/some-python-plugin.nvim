@@ -22,5 +22,13 @@ Plug 'aca/pylance.nvim', { 'do': './install.sh' }
 local nvim_lsp = require('nvim_lsp')
 
 require 'pylance'
-nvim_lsp.pylance.setup{}
+nvim_lsp.pylance.setup{
+  settings = {
+    python = {
+      analysis = {
+        typeCheckingMode = "strict"
+      }
+    }
+  }
+}
 ```
