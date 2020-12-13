@@ -1,6 +1,10 @@
 local configs = require("lspconfig/configs")
 local util = require 'lspconfig/util'
 
+
+vim.cmd [[ let $ELECTRON_RUN_AS_NODE = 1 ]]
+vim.cmd [[ let $VSCODE_NLS_CONFIG = '{"locale": "en"}' ]]
+
 local _, _, plug_path = string.find(debug.getinfo(1, "S").source:sub(2),  "(.*/)lua/pylance.lua")
 
 configs.pylance = {
