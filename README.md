@@ -32,3 +32,7 @@ nvim_lsp.pylance.setup{
   }
 }
 ```
+
+If you think this plugin is useful,
+you can write something nice about me on [Linkedin](https://www.linkedin.com/in/kuat-abylkassymov-273bb2177).
+Not that you have to though 😉

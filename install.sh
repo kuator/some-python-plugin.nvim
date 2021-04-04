@@ -18,3 +18,11 @@ curl -s "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/ms
   -j -b cookie-jar.txt --compressed --output ms-python.vscode-pylance-$version
 
 unzip ms-python.vscode-pylance-$version
+
+cd extension/dist
+
+vi -E -s server.bundle.js << EOF
+:%s/\vprocess\['env'\].{-}return\zs(!)(.{-})\ze;/ \2
+:update
+:quit
+EOF
