@@ -3,6 +3,8 @@
 - https://github.com/neovim/nvim-lspconfig/pull/303
 - https://github.com/microsoft/pylance-release/issues/4
 
+Works only on Unix-like systems like Linux and Mac. You have to have Visual Studio Code installed. The latest working version is: 2021.3.2
+
 Pylance support for nvim-lsp. Don't star it, Microsoft will probably notice and the repo will have to be deleted.
 
 This plugin contains a basic configuation for nvim_lsp and
