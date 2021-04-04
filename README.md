@@ -3,12 +3,12 @@
 - https://github.com/neovim/nvim-lspconfig/pull/303
 - https://github.com/microsoft/pylance-release/issues/4
 
-Pylance support for nvim-lsp.
+Pylance support for nvim-lsp. Don't star it, Microsoft will probably notice and the repo will have to be deleted.
 
-This plugin just contains basic configuation for nvim_lsp and
+This plugin contains a basic configuation for nvim_lsp and
 [script](./install.sh) to download and install latest vscode pylance server.
 
-Make sure jq, curl, unzip, vi is installed to make script works.
+Make sure jq, curl, unzip, vi are installed to make script work.
 
 ---
 
@@ -33,6 +33,4 @@ nvim_lsp.pylance.setup{
 }
 ```
 
-If you think this plugin is useful,
-you can write something nice about me on [Linkedin](https://www.linkedin.com/in/kuat-abylkassymov-273bb2177).
-Not that you have to though 😉
+If you think this plugin is useful, you can write something nice about me on [Linkedin](https://www.linkedin.com/in/kuat-abylkassymov-273bb2177). Not that you have to though 😉
