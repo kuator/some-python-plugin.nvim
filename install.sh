@@ -6,7 +6,7 @@ export pylance_home=$(find ~/.vscode/extensions -iname "*pylance*" -type d | sor
 cd $pylance_home/dist
 
 vi -E -s server.bundle.js << EOF
-:%s/\vprocess\['env'\].{-}return\zs(!)(.{-})\ze;/ \2
+:%s/\vif(\(!process\['env'\].{-}\))(return.{-})\ze;/return true
 :update
 :quit
 EOF
