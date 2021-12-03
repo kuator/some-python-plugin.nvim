@@ -1,5 +1,5 @@
-local configs = require("lspconfig/configs")
-local util = require 'lspconfig/util'
+local configs = require("lspconfig.configs")
+local util = require 'lspconfig.util'
 
 
 vim.cmd [[ let $ELECTRON_RUN_AS_NODE = 1 ]]
