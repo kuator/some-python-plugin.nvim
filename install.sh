@@ -28,6 +28,8 @@ unzip ms-python.vscode-pylance-$version
 
 set -euox pipefail
 
+mv extension pylance
+
 cd extension/dist
 
 js-beautify -r server.bundle.js
