@@ -5,9 +5,8 @@ local util = require 'lspconfig.util'
 vim.cmd [[ let $ELECTRON_RUN_AS_NODE = 1 ]]
 vim.cmd [[ let $VSCODE_NLS_CONFIG = '{"locale": "en"}' ]]
 
-local pylance_home=vim.fn.system('find ~/.vscode/extensions -iname "*pylance*" -type d | sort | tail -1')
+local pylance_home=vim.fn.system('find ~/opt/pkg -iname "*pylance*" -type d | sort | tail -1')
 pylance_home = pylance_home:gsub("%s+", "")
-
 
 configs.pylance = {
     default_config = {
