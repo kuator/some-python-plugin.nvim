@@ -30,7 +30,7 @@ set -euox pipefail
 
 mv extension pylance
 
-cd extension/dist
+cd pylance/dist
 
 js-beautify -r server.bundle.js
 
