@@ -6,6 +6,8 @@ if [ "$OPT" = "" ]; then
   mkdir -p ~/opt
 fi
 
+cd ~/opt
+
 rm -rf pkg || true
 
 version=$(curl -s 'https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance' | grep '<script class="jiContent" defer="defer" type="application/json">' |  sed 's/<[^>]*>//g' | jq -r .Resources.Version)
