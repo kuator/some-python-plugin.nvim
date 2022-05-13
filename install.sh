@@ -24,11 +24,9 @@ curl -s "https://marketplace.visualstudio.com/_apis/public/gallery/publishers/ms
   -H 'Referer: https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance' \
   -j -b cookie-jar.txt --compressed --output ms-python.vscode-pylance-$version
 
-unzip ms-python.vscode-pylance-$version
+unzip ms-python.vscode-pylance-$version && mv extension pylance
 
 set -euox pipefail
-
-mv extension pylance
 
 cd pylance/dist
 
